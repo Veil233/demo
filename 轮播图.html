@@ -123,12 +123,12 @@
     </button>
   </div>
   <script>
-    var items = document.getElementsByClassName('item');
-    var points = document.getElementsByClassName('point')
-    var goBackBtn = document.getElementById('goBackBtn');
-    var goNextBtn = document.getElementById('goNextBtn');
-    var index = 0;
-    var time = 0;
+    var items = document.getElementsByClassName('item');//图片列表
+    var points = document.getElementsByClassName('point')//点
+    var goBackBtn = document.getElementById('goBackBtn');//回退按钮
+    var goNextBtn = document.getElementById('goNextBtn');//前进按钮
+    var index = 0;//当前图片索引
+    var time = 0;//时间计数
 
     var clearActive = function () {
       for (let i = 0; i < items.length; i++) {
@@ -179,6 +179,7 @@
       })
     }
 
+    //每隔三秒自动跳转一次
     setInterval(function(){
       time ++;
       if(time == 30){
